@@ -1,0 +1,44 @@
+/**
+  USAGE: 
+    Add following to global.less
+
+  Details:
+    This assumes you're using the header+nav markup from base-template.
+
+  TODO: 
+    Make max-width configurable?
+
+*/
+
+/* Fixed top header */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  padding: 0px 20px;
+  nav {
+    float: right;
+    max-width: 65%;
+    text-align: right;
+  }
+  h1 {
+    float: left;
+    max-width: 35%;
+  }
+} 
+
+/* Styled header */
+@bodyColor: #F5F4F0;
+@textColor: #464646;
+#header {
+  color: @textColor;
+
+  background-color: @bodyColor;
+  h1 {
+    a {
+      text-decoration: none; 
+    }
+  }
+}

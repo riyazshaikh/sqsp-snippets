@@ -1,4 +1,6 @@
-sqsp-snippets
+SQSP Snippets
 =============
 
-Handy css/less/js snippets for Squarespace Templates
+A collection of handy css/less/js snippets for use in Squarespace Templates.
+
+# Center Vertical # - Simple way to vertically center elements within container.

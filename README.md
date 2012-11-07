@@ -1,6 +1,5 @@
-SQSP Snippets
+sqsp-snippets
 =============
-
 A collection of handy css/less/js snippets for use in Squarespace Templates.
 
 Center Vertical 

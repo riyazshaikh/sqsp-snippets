@@ -6,12 +6,15 @@
     USAGE:
     <script src="ajaxifier.js"></script>
     <script>Y.use('squarespace-ajaxifier', function() { new Y.Squarespace.Ajaxifier(); });</script>
+    <section role="main">xxx</section>
 
     Details:
     Sets up click handlers on anchor links with relative urls,
-    to fetch content via ajax and inject into DOM
+    to fetch content via ajax and inject into DOM 
 
-    Value in a[href] is used.
+    Fetches content based on value in a[href].
+
+    Decides where to insert based on [role="main"] selector (and other guesses)
 
     HTML5 History is used to update url.
  

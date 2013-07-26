@@ -1,22 +1,24 @@
 /*
 	USAGE: 
-		<script src="jquery.js"></script>
 		<script src="keyboard-nav.js"></script>
 		<a data-keypress="37" href="{url}">Next Page</a>
 
 	Details:
 		Finds any anchor links with matching keyCode. Sets window.location to its href.
 
-	TODO: Convert to YUI
 */
 
-// Navigate on key left/right
-$(document).keydown(function(e) {
+Y.use('node', 'key-event', function(Y) {
+  Y.on('domready', function() {
 
-	var targetLink = $('a[data-keypress="'+e.keyCode+'"]');
-	if( targetLink.length ) {
-		e.preventDefault();
-		window.location.href = targetLink.attr('href');
-	}
+    // Keyboard navigation
+    Y.on('keydown', function(event) {
+      var targetLink = Y.one('a[data-keypress="'+event.keyCode+'"]');
+      if (targetLink) {
+        event.preventDefault();
+        window.location.href = targetLink.getAttribute('href');
+      }
+    });
 
+  });
 });
